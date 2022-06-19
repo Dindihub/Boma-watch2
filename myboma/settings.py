@@ -15,6 +15,9 @@ import os
 # import django_heroku
 import dj_database_url
 from decouple import config,Csv
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
@@ -74,7 +77,18 @@ INSTALLED_APPS = [
     'bootstrap4',
     'static',
     'crispy_forms',
+    'cloudinary'
 ]
+
+# adding config
+cloudinary.config( 
+cloud_name = "dgzo0lyrz", 
+api_key = "936979898137767", 
+api_secret = "Cg4MaPzMgXS-WiNoTSjq7BdItbw" 
+#   cloud_name = "YOUR_CLOUD_NAME", 
+#   api_key = "YOUR_API_KEY", 
+#   api_secret = "YOUR_API_SECRET" 
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -167,6 +181,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = 'static/'
+
+LOGIN_REDIRECT_URL= 'home'
+LOGOUT_REDIRECT_URL= 'home'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
