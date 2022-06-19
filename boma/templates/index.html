@@ -5,31 +5,18 @@
 <body id="top">
     <!-- Top Background Image Wrapper -->
     <div class="bgded overlay padtop" style="background-image:url('/static/photos/houses-5188152_1280.png');">
-        <header id="header" class="hoc clear">
-            <div id="logo" class="fl_left">
-                <h1><a href="index.html">iBoma</a></h1>
-            </div>
-            <nav id="mainav" class="fl_right">
-                <ul class="clear">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a class="" href="#">Pages</a>
-                    </li>
-
-                    <li><a href="#">Link Text</a></li>
-                    <li><a href="#">Link Text</a></li>
-                    <li><a href="#">Link Text</a></li>
-                </ul>
-            </nav>
-        </header>
+        
         <div id="pageintro" class="hoc clear">
             <article>
-                <h3 class="heading">Suspendisse potenti</h3>
-                <p>Arcu mi porttitor est non felis aliquam ullamcorper sed porttitor accumsan arcu maecenas lorem elit
-                    tristique quis iaculis at euismod vel arcu donec et lorem.</p>
+                <h3 class="heading">Welcome to iBoma</h3>
+                <h6>Our vision is a society where neighbours come together to create safer, stronger and active
+                    communities.
+
+                </h6>
                 <footer>
                     <ul class="nospace inline pushright">
-                        <li><a class="btn" href="#">Integer</a></li>
-                        <li><a class="btn inverse" href="#">Egestas</a></li>
+                        <li><a class="btn" href="{% url 'register' %}">Join us </a></li>
+                        <li><a class="btn inverse" href="{% url 'login' %}">Create Hood</a></li>
                     </ul>
                 </footer>
             </article>
@@ -46,7 +33,7 @@
                 </li>
                 <li class="one_quarter">
                     <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a
-                                mail:</strong> support@domain.com</span></div>
+                                mail:</strong> support@iboma.com</span></div>
                 </li>
                 <li class="one_quarter">
                     <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. -
@@ -54,66 +41,60 @@
                 </li>
                 <li class="one_quarter">
                     <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come
-                                visit us:</strong> Directions to <a href="#">our location</a></span></div>
+                                visit us:</strong> Nairobi <a href="#">Val halla Towers</a></span></div>
                 </li>
             </ul>
         </section>
     </div>
 
-    <div class="wrapper row3">
+    <div class="wrapper row3" id="about-us">
         <main class="hoc container clear">
             <!-- main body -->
             <section id="services">
                 <div class="sectiontitle">
-                    <p class="nospace font-xs">Mauris tempor aliquam venenatis</p>
-                    <h6 class="heading">Curabitur at odio sed enim</h6>
+                    <p class="nospace font-xs">Our mission is to support and enable individuals and communities to be connected, active and safe, which increases wellbeing and minimises crime.</p>
+                    <h4 class="heading" style="color:#01546B"><strong>our Values</strong></h4>
                 </div>
                 <ul class="nospace group grid-3">
                     <li class="one_third">
                         <article><a href="#"><i class="fas fa-spray-can"></i></a>
-                            <h6 class="heading">Vehicula</h6>
-                            <p>Nulla cursus metus non tortor erat turpis sed semper risus nisi id nunc ut congue cursus
-                                tortor aliquam.</p>
+                            <h6 class="heading">Neighbourly</h6>
+                            <p>We aspire to be good neighbours with a strong sense of community</p>
                             <footer><a href="#">More Details &raquo;</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
                         <article><a href="#"><i class="fas fa-user-secret"></i></a>
-                            <h6 class="heading">Porttitor</h6>
-                            <p>Vehicula nisl ac porta blandit velit risus lobortis turpis sit amet lobortis sapien dui
-                                id neque suspendisse.</p>
+                            <h6 class="heading">Community focused</h6>
+                            <p>We bring people of all kinds,races and cultures together</p>
                             <footer><a href="#">More Details &raquo;</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
                         <article><a href="#"><i class="fas fa-couch"></i></a>
-                            <h6 class="heading">Pulvinar</h6>
-                            <p>Vel justo mattis magna vestibulum molestie quisque sagittis in a enim in metus ultrices
-                                tristique nam semper.</p>
+                            <h6 class="heading">Proactive</h6>
+                            <p>We are active within communities and we are relevant in today’s world.</p>
                             <footer><a href="#">More Details &raquo;</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
                         <article><a href="#"><i class="fas fa-crow"></i></a>
-                            <h6 class="heading">Ultricies</h6>
-                            <p>Tincidunt metus nunc ornare mi at nibh ut ante est imperdiet dignissim eleifend sit amet
-                                lacinia tempor justo.</p>
+                            <h6 class="heading">Trusted</h6>
+                            <p>We are dependable, caring, respectable, approachable and supportive.</p>
                             <footer><a href="#">More Details &raquo;</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
                         <article><a href="#"><i class="fas fa-dolly-flatbed"></i></a>
-                            <h6 class="heading">Vestibulum</h6>
-                            <p>Pellentesque malesuada sed et nulla sit amet nisi scelerisque consectetuer vivamus odio
-                                donec metus libero semper.</p>
+                            <h6 class="heading">Collaborative</h6>
+                            <p>We work as a team, in partnerships and within communities.</p>
                             <footer><a href="#">More Details &raquo;</a></footer>
                         </article>
                     </li>
                     <li class="one_third">
                         <article><a href="#"><i class="fas fa-road"></i></a>
-                            <h6 class="heading">Lobortis</h6>
-                            <p>Quis suscipit ut aliquam a metus ut interdum risus id luctus consectetuer velit neque
-                                ornare quam at ornare.</p>
+                            <h6 class="heading">Inclusive</h6>
+                            <p>We are welcoming to all people and their ideas.We yearn to grow together.</p>
                             <footer><a href="#">More Details &raquo;</a></footer>
                         </article>
                     </li>
