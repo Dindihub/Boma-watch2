@@ -1,0 +1,34 @@
+<header id="header" class="hoc clear mt-4">
+    <div id="logo" class="fl_left">
+        <h1><a href="index.html">iBoma</a></h1>
+    </div>
+
+    
+
+    
+    <nav id="mainav" class="fl_right">
+        <ul class="clear">
+            <li class="active"><a href="{% url 'index'%}">Home</a></li>
+            <li><a class="" href="#about-us">About us</a>
+            </li>
+
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Join us </a></li>
+            {% if user.is_authenticated%}
+            <li><a href="{% url 'home' %}">Hoods </a></li>
+            <li><a href="{% url 'create_hood'%}"> Create Hood</a></li>
+            <li><a class="drop" href="#"> Hi {{request.user}} </a>
+                
+                <ul>
+                    <li><a href="{% url 'profile'%}"> My Profile</a></li>
+                    <li><a href="{% url 'logout'%}">Log out</a></li>
+
+                </ul>
+            </li>
+
+            {% else %}
+            <a href="{% url 'login' %}"></a>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
