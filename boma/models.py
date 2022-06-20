@@ -19,7 +19,7 @@ class NeighbourHood(models.Model):
 
     def __str__(self):
         return f'{self.name} hood'
-    def create_neighborhood(self):
+    def save_neighborhood(self):
         self.save()
 
     def delete_neighborhood(self):
@@ -61,6 +61,12 @@ class Profile(models.Model):
     def delete_profile(self):
         self.delete()
 
+    @classmethod
+    def get_profile(cls):
+        profile = Profile.objects.all()
+
+        return profile
+
     class Meta:
         # db_table = 'profiles'
         ordering = ['-id']
@@ -83,8 +89,8 @@ class Business(models.Model):
         self.delete()
 
     @classmethod
-    def search_business(cls, name):
-        return cls.objects.filter(name__icontains=name).all()
+    def search_business(cls,search_term):
+        return cls.objects.filter(name__icontains=search_term).all()
     class Meta:
         # db_table = 'businesss'
         ordering = ['-id']
@@ -101,7 +107,12 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.title} post'
 
+    def save_post(self):
+        self.save()
 
+    def delete_post(self):
+        self.delete()
+        
     class Meta:
         # db_table = 'posts'
         ordering = ['-id']
