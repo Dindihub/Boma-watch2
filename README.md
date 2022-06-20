@@ -16,7 +16,7 @@ You can view the site at:[iBoma]()
 As a user I would like to:
 * See various neighbourhoods and their details  
 * Join various neighbourhoods 
-* Allowed to sign up 
+* Allowed to Register up and Login 
 * Allowed to search and create businesses
 * Allowed to create a neighbourhood
 * Allowed to post random posts and businesses details
@@ -73,7 +73,7 @@ As a user I would like to:
 
 ## Known Bugs
 Only search for businesses
-may not be responsive on small devices
+May not be responsive on small devices
 
 ### License
 MIT (c) 2022 **[Sandra Dindi](https://github.com/Dindihub/Boma-watch.git)**
