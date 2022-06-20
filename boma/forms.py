@@ -23,3 +23,18 @@ class NeighbourHoodForm(forms.ModelForm):
         model = NeighbourHood
         exclude = ('admin',)
 
+class UpdateHoodForm(forms.ModelForm):
+    class Meta:
+        model = NeighbourHood
+        fields = '__all__'
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = '__all__'
+
+class BusinessForm(forms.ModelForm):
+    class Meta:
+        model = Business
+        fields = '__all__'
+
