@@ -14,9 +14,10 @@ urlpatterns=[
     path('update_profile', views.update_profile, name='update_profile'),
     path('create-hood', views.create_hood, name='create_hood'),
     path ('join_hood/<str:id>/',views.join_hood,name='join_hood'),
-    # path('hoods', views.hoods, name='hood'),
-    # path('upload_project', views.upload_project, name='upload_project'),
-    # path('search', views.project_search, name='search'),
+    path('post/<hood_id>', views.create_post, name='post'),
+    path('addbusiness/<hood_id>',views.add_business, name='addbusiness'),
+    path('search', views.search_business, name='search'),
+    
 
     
 
