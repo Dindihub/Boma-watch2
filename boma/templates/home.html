@@ -9,19 +9,6 @@
   data-parallax="scroll"
   data-image-src="../static/photos/" style=""
 >
-  <form class="d-flex tm-search-form col-sm-6" action="#">
-    <input
-      class="form-control tm-search-input"
-      type="search"
-      placeholder="Search for Neighborhoods"
-      aria-label="Search"
-      name="category_search"
-      
-    />
-    <button class="btn btn-danger  tm-search-btn" type="submit">
-      <i class="fas fa-search"></i> 
-    </button>
-  </form>
   
 </div>
 
@@ -39,9 +26,9 @@
             <div class="card mb-4" style="min-height:340px">
                 <img src="{{neighbourhood.hood_logo.url }}" class="card-img-top" alt="{{user.hood.name }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{neighbourhood.name }}  ({{neighbourhood.location}}) <span class="ml-4">{{neighbourhood.members.count}} member{{neighbourhood.members.count|pluralize}}</span></h5>
+                    <h5 class="card-title">{{neighbourhood.name }}  ({{neighbourhood.location}}) <span class="ml-4">{{neighbourhood.Count}} member{{neighbourhood.members.count|pluralize}}</span></h5>
                     <p class="card-text">{{neighbourhood.description}}</p>
-                    <p class="card-text">{{neighbourhood.member.count}}</p>
+                    <p class="card-text">{{neighbourhood.member.Count}}</p>
                     <a href="{% url 'join_hood' neighbourhood.id %}" class="btn btn-primary btn-sm">Join Hood</a>
              
                     {% if request.user.profile.neighbourhood == hood %}
@@ -54,17 +41,6 @@
         </div>
         {% endfor %}
     </div>
-</div>
-
-
-       
-    
-
-
-
-
-
-
-
+  </div>
 
 {% endblock %}
