@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+{% for business in results %}
+<div class="col-md-4 mt-4" style="color:black;">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"><strong>Business Name: </strong>  {{business.name|title}}</h4>
+            <p class="card-text"><strong>Description: </strong>  {{ business.description}}</p>
+            <p class="card-text"><strong>Contact: </strong>  {{ business.email}}</p>
+            
+            </div>
+            
+            <hr>
+
+            By {{request.user|title}} <span style="float:right">{{business.date_posted|date}}</span>
+
+
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endfor %}
+
+
+{% endblock %}

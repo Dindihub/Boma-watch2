@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+django = "*"
+cloudinary = "*"
+dj-database-url = "*"
+python-decouple = "*"
+django-crispy-forms = "*"
+django-bootstrap4 = "*"
+psycopg2 = "*"
+whitenoise = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

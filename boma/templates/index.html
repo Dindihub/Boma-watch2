@@ -1,0 +1,120 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+
+<body id="top">
+   
+    <div class="bgded overlay padtop" style="background-image:url('/static/photos/houses-5188152_1280.png');">
+        
+        <div id="pageintro" class="hoc clear">
+            <article>
+                <h3 class="heading">Welcome to iBoma</h3>
+                <h6>Our vision is a society where neighbours come together to create safer, stronger and active
+                    communities.
+
+                </h6>
+                <footer>
+                    <ul class="nospace inline pushright">
+                        <li><a class="btn" href="{% url 'register' %}">Join us </a></li>
+                        <li><a class="btn inverse" href="{% url 'login' %}">Create Hood</a></li>
+                    </ul>
+                </footer>
+            </article>
+        </div>
+    </div>
+   
+    <div class="wrapper row1">
+        <section id="ctdetails" class="hoc clear">
+          
+            <ul class="nospace clear">
+                <li class="one_quarter first">
+                    <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a
+                                call:</strong> +00 (123) 456 7890</span></div>
+                </li>
+                <li class="one_quarter">
+                    <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a
+                                mail:</strong> support@iboma.com</span></div>
+                </li>
+                <li class="one_quarter">
+                    <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. -
+                                Sat.:</strong> 08.00am - 18.00pm</span></div>
+                </li>
+                <li class="one_quarter">
+                    <div class="block clear"><a href="#"><i class="fas fa-map-marker-alt"></i></a> <span><strong>Come
+                                visit us:</strong> Nairobi <a href="#">Val halla Towers</a></span></div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="wrapper row3" id="about-us">
+        <main class="hoc container clear">
+           
+            <section id="services">
+                <div class="sectiontitle">
+                    <p class="nospace font-xs">Our mission is to support and enable individuals and communities to be connected, active and safe, which increases wellbeing and minimises crime.</p>
+                    <h4 class="heading" style="color:#01546B"><strong>our Values</strong></h4>
+                </div>
+                <ul class="nospace group grid-3">
+                    <li class="one_third">
+                        <article><a href="#"><i class="fas fa-spray-can"></i></a>
+                            <h6 class="heading">Neighbourly</h6>
+                            <p>We aspire to be good neighbours with a strong sense of community</p>
+                            <footer><a href="#">More Details &raquo;</a></footer>
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article><a href="#"><i class="fas fa-user-secret"></i></a>
+                            <h6 class="heading">Community focused</h6>
+                            <p>We bring people of all kinds,races and cultures together</p>
+                            <footer><a href="#">More Details &raquo;</a></footer>
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article><a href="#"><i class="fas fa-couch"></i></a>
+                            <h6 class="heading">Proactive</h6>
+                            <p>We are active within communities and we are relevant in today’s world.</p>
+                            <footer><a href="#">More Details &raquo;</a></footer>
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article><a href="#"><i class="fas fa-crow"></i></a>
+                            <h6 class="heading">Trusted</h6>
+                            <p>We are dependable, caring, respectable, approachable and supportive.</p>
+                            <footer><a href="#">More Details &raquo;</a></footer>
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article><a href="#"><i class="fas fa-dolly-flatbed"></i></a>
+                            <h6 class="heading">Collaborative</h6>
+                            <p>We work as a team, in partnerships and within communities.</p>
+                            <footer><a href="#">More Details &raquo;</a></footer>
+                        </article>
+                    </li>
+                    <li class="one_third">
+                        <article><a href="#"><i class="fas fa-road"></i></a>
+                            <h6 class="heading">Inclusive</h6>
+                            <p>We are welcoming to all people and their ideas.We yearn to grow together.</p>
+                            <footer><a href="#">More Details &raquo;</a></footer>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            
+            <div class="clear"></div>
+        </main>
+    </div>
+
+
+   
+    <script src="layout/scripts/jquery.min.js"></script>
+    <script src="layout/scripts/jquery.backtotop.js"></script>
+    <script src="layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+
+
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="card mb-3 bg-whitesmoke" style="max-width:fit content;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{neighbourhood.hood_logo.url}}" width="100px" alt="Trendy Pants and Shoes"
+                class="mx-auto d-block " />
+        </div>
+
+        <div class="col-md-8" style="color:black;">
+            <div class="card-body">
+                <h5 class="card-title"> Welcome {{request.user|title}} !</h5>
+                <p class="card-text pt-4"> <strong> Name: </strong> {{ neighbourhood.name}}</p>
+                <p class="card-text pt-4"> <strong> Location:</strong> {{neighbourhood.location}}</p>
+                <p class="card-text pt-4"> <strong> Description:</strong> {{ neighbourhood.description}}</p>
+                <p class="card-text pt-4"> <strong> Health tel:</strong> {{ neighbourhood.health_tell}}</p>
+                <p class="card-text pt-4"> <strong> Police Number:</strong> {{ neighbourhood.police_number}}</p>
+                <p class="card-text pt-4"> <strong> Residents :</strong> {{ neighbourhood.Count}}</p>
+
+                <a href="#"><button class="btn" style="width:150px;">Edit Hood</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="{% url 'post' neighbourhood.id %}"><button class="btn" style="width:150px;">Create Post</button></a><span><a
+        href="{% url 'addbusiness' neighbourhood.id %}"><button class="btn" style="width:150px;">Add
+            business</button></a></span>
+<div class="container-fluid tm-hero d-flex justify-content-center align-items-center mt-3">
+    <form class="d-flex tm-search-form col-sm-6" action="{% url 'search' %}">
+        <input class="form-control tm-search-input" type="search" placeholder="Search for Business" aria-label="Search"
+            name="business"/>
+        <button class="btn btn-danger  tm-search-btn" type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+</div>
+
+
+
+
+<div class="container text-center d-flex">
+    <i class="fa fa-th-large blue-text ">&nbsp;&nbsp;Hood posts</i>
+
+    <div class="row p-4">
+        <div class="col-md-sm-8">
+            <h1 class=""> Community Posts</h1>
+
+            {% for post in posts %}
+            <div class="card-border-light mb-3" style="color:black;background-color:white;max-width:30rem;">
+                <div class="card-header">POST
+                    <hr>
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <hr>
+                        <p class="card-text">{{post.post}}</p>
+
+                    </div>
+                    <div>
+                        {{post.date|date}} <span><small>From: {{request.user}}</small></span>
+                    </div>
+
+                </div>
+
+            </div>
+{% endfor %}
+        </div>
+
+    </div>
+
+    <div class="row p-4">
+        <div class="col-md-sm-4 ml-4">
+            <h1>Business posts</h1>
+
+            {% for business in business %}
+            <div class="card-border-light mb-3" style="color:black;background-color:white;max-width:30rem;">
+                <div class="card-header">Business
+                    <hr>
+                    <div class="card-body">
+                        <h5 class="card-title"> Business Name: {{business.name}}</h5>
+                        <hr>
+                        <p class="card-text"> Contact:{{business.email}}</p>
+                        <p class="card-text">Description:{{business.description}}</p>
+
+                    </div>
+                    <div>
+                        {{post.date|date}} <span><small>From: {{request.user}}</small></span>
+                    </div>
+
+                </div>
+
+            </div>
+           
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

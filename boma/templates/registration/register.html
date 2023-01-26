@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+<div class="container" style="">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card" style="color:black;">
+                <div class="card-body">
+                    <h5 class="card-title"><a>Register to be a member</a> <span style="float:right">Are you a member? <a
+                            href="{% url 'login' %}" class="text-primary">Login now</a></span></h5>
+                    <div class="card-text">
+                        <form action="" method="POST" novalidate>
+                            {% csrf_token%}
+                            {{ form|crispy}}
+                            <button type="submit" class="btn btn-primary btn-sm"> Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+
+
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
