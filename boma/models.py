@@ -3,7 +3,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
-from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 
@@ -11,7 +11,7 @@ class NeighbourHood(models.Model):
     admin = models.ForeignKey("Profile", on_delete=models.CASCADE, related_name='hood')
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=60)
-    hood_logo = CloudinaryField('hood_logo',default='default.png')
+    hood_logo = models.ImageField(upload_to='photos/', default='default.png')
     description = models.TextField()
     health_tell = models.IntegerField(null=True, blank=True)
     police_number = models.IntegerField(null=True, blank=True)
@@ -38,7 +38,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     name = models.CharField(max_length=80, blank=True)
     bio = models.TextField(max_length=254, blank=True)
-    profile_picture = CloudinaryField('profile_picture', default='default.png')
+    profile_picture = models.ImageField(upload_to='photos/', default='default.png')
     location = models.CharField(max_length=50, blank=True, null=True)
     email= models.EmailField(null=True)
     neighbourhood = models.ForeignKey(NeighbourHood, on_delete=models.SET_NULL, null=True, related_name='members', blank=True)

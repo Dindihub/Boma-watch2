@@ -14,6 +14,7 @@ django-bootstrap4 = "*"
 psycopg2 = "*"
 whitenoise = "*"
 gunicorn = "*"
+pillow = "*"
 
 [dev-packages]
 

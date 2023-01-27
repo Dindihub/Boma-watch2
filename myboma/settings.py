@@ -100,12 +100,12 @@ WSGI_APPLICATION = 'myboma.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': config('DB_NAME'),
-    #     'USER': config('DB_USER'),
-    # 'PASSWORD':config('DB_PASSWORD'),
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+    'PASSWORD':config('DB_PASSWORD'),
+    }
  }
 
 
